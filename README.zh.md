@@ -1,11 +1,11 @@
-# AgentBench — AI Agent 可观测性与回归测试平台
+# AgentEvalOps — AI Agent 可观测性与回归测试平台
 
 [English](README.md) | [中文](README.zh.md)
 
 > 面向 AI Agent 的回归测试、漂移检测与质量保障平台。
 > **完全由 Claude Code 构建** — AI 编程既是手段，也是产品本身。
 
-> ⚠️ **命名声明**：本项目与清华大学 [THUDM/AgentBench](https://github.com/THUDM/AgentBench)（用于评估 LLM-as-Agent 能力的学术基准测试框架）**无任何关联**。名称重合纯属无意。如果你在寻找学术研究基准（涵盖操作系统、数据库、知识图谱、网购等环境），请访问 [THUDM 仓库](https://github.com/THUDM/AgentBench)。本仓库是一个独立的 **EvalOps 仪表盘**，帮助团队对自身 AI Agent 进行回归测试。
+> ⚠️ **命名声明**：本项目原名 AgentBench，现已改名为 **AgentEvalOps**，以避免与清华大学 [THUDM/AgentBench](https://github.com/THUDM/AgentBench) 学术基准测试项目混淆。
 
 ## 它能做什么
 
@@ -15,7 +15,7 @@
 |---|---|---|
 | ![仪表盘](screenshots/dashboard.png) | ![套件](screenshots/suites.png) | ![对比](screenshots/compare.png) |
 
-AgentBench 是一个 EvalOps 平台，帮助团队交付可靠的 AI Agent，提供以下核心能力：
+AgentEvalOps 是一个 EvalOps 平台，帮助团队交付可靠的 AI Agent，提供以下核心能力：
 
 - **测试套件管理** — 为 AI Agent 定义测试用例，包含输入与预期输出
 - **回归测试** — 运行评估并在不同 Agent 版本间追踪质量变化
@@ -89,11 +89,11 @@ src/
 
 ## 常见问题
 
-### 这是清华大学（THUDM）的那个 AgentBench 吗？
+### 这个项目以前叫 AgentBench 吗？
 
-**不是。** 这是一个在黑客松期间创建的独立项目，名称重合纯属无意。
+**是。** 现在改名为 AgentEvalOps，既能更准确表达 EvalOps 定位，也避免与 THUDM/AgentBench 混淆。
 
-| | THUDM/AgentBench | 本项目 |
+| | THUDM/AgentBench | AgentEvalOps |
 |---|---|---|
 | **目的** | 学术基准测试，横向对比不同 LLM 的 Agent 能力 | EvalOps 仪表盘，帮助团队对自身 Agent 做回归测试 |
 | **目标用户** | AI 研究者、模型开发者 | 工程团队、产品经理 |
@@ -111,6 +111,6 @@ MIT — 详见 [LICENSE](./LICENSE)。
 
 **问题：** 部署 AI Agent 的团队在修改提示词、模型或工具时，缺乏可靠手段来检测质量退化。一次微小的提示词调整就可能悄无声息地破坏下游行为。
 
-**解决方案：** AgentBench 提供了一套面向 AI Agent 的、CI 友好的回归测试框架 —— 定义黄金测试用例，每次变更都运行评估，在问题进入生产环境前捕获退化。
+**解决方案：** AgentEvalOps 提供了一套面向 AI Agent 的、CI 友好的回归测试框架 —— 定义黄金测试用例，每次变更都运行评估，在问题进入生产环境前捕获退化。
 
 **元叙事：** 本项目完全由 AI（Claude Code）在单次会话中构建完成，验证了"AI 编程能够产出生产级开发者工具"这一命题。

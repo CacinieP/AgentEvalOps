@@ -1,4 +1,4 @@
-"""从 CC Switch 的 JSONL 会话文件中提取编程任务并导出为 AgentBench 测试套件格式
+"""从 CC Switch 的 JSONL 会话文件中提取编程任务并导出为 AgentEvalOps 测试套件格式
 
 原理：
   CC Switch 的 proxy_request_logs 不存请求/响应体，但 session_log_sync 表记录了
@@ -6,11 +6,11 @@
   Claude 的回复（包括思考过程、工具调用、最终文本回复）。
 
   本脚本遍历所有 JSONL 会话文件，提取编程任务（用户提示词）和 Claude 的最终回复，
-  筛选出编程相关的对话，导出为可直接导入 AgentBench 的 JSON 测试套件。
+  筛选出编程相关的对话，导出为可直接导入 AgentEvalOps 的 JSON 测试套件。
 
 使用方法：
-  python cc_switch_to_agentbench.py
-  # 输出: cc_switch_coding_suites.json — 可直接导入 AgentBench（设置 → 导入 JSON）
+  python cc_switch_to_agentevalops.py
+  # 输出: cc_switch_coding_suites.json — 可直接导入 AgentEvalOps（设置 → 导入 JSON）
 """
 
 import sqlite3
@@ -155,7 +155,7 @@ def sanitize_name(text: str, max_len: int = 60) -> str:
     return name
 
 def build_test_case(prompt: str, response: str, index: int) -> dict:
-    """Build an AgentBench test case from a prompt-response pair"""
+    """Build an AgentEvalOps test case from a prompt-response pair"""
     short_id = hashlib.md5(prompt.encode()).hexdigest()[:8]
     return {
         "id": f"cc-{short_id}",
@@ -172,7 +172,7 @@ def build_test_case(prompt: str, response: str, index: int) -> dict:
 
 def main():
     print("=" * 60)
-    print("  CC Switch → AgentBench 测试套件导出")
+    print("  CC Switch → AgentEvalOps 测试套件导出")
     print("=" * 60)
 
     # 1. Get all JSONL session files from CC Switch
@@ -340,7 +340,7 @@ def main():
     for s in suites:
         print(f"    - {s['name']}: {len(s['cases'])} 个用例")
     print()
-    print("  导入方式：AgentBench → 设置 → 导入 JSON / JSONL")
+    print("  导入方式：AgentEvalOps → 设置 → 导入 JSON / JSONL")
 
 if __name__ == "__main__":
     main()

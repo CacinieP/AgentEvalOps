@@ -1,11 +1,11 @@
-# AgentBench — AI Agent EvalOps Platform
+# AgentEvalOps — AI Agent EvalOps Platform
 
 [English](README.md) | [中文](README.zh.md)
 
 > Regression testing, drift detection, and quality assurance for AI agents.
 > **Built entirely with Claude Code** — AI coding as both the means and the product.
 
-> ⚠️ **Naming Notice**: This project is **not affiliated** with [THUDM/AgentBench](https://github.com/THUDM/AgentBench), the academic benchmark for evaluating LLM-as-Agent capabilities from Tsinghua University. The name collision is unintentional. If you are looking for the research benchmark (OS, Database, Knowledge Graph, WebShop, etc.), please visit the [THUDM repository](https://github.com/THUDM/AgentBench). This repo is an independent **EvalOps dashboard** for teams to regression-test their own AI agents.
+> ⚠️ **Naming Notice**: This project was formerly named AgentBench and was renamed to **AgentEvalOps** to avoid confusion with [THUDM/AgentBench](https://github.com/THUDM/AgentBench), the academic benchmark for evaluating LLM-as-Agent capabilities from Tsinghua University.
 
 ## Features
 
@@ -110,11 +110,11 @@ This project was selected from 45+ daily opportunity reports as the most validat
 
 ## FAQ
 
-### Is this the same AgentBench from Tsinghua University (THUDM)?
+### Was this formerly called AgentBench?
 
-**No.** This is an independent hackathon project. The name collision is unintentional.
+**Yes.** It was renamed to AgentEvalOps to make the project scope clearer and avoid confusion with THUDM/AgentBench.
 
-| | THUDM/AgentBench | This Project |
+| | THUDM/AgentBench | AgentEvalOps |
 |---|---|---|
 | **Purpose** | Academic benchmark to compare LLMs | EvalOps dashboard for regression-testing your own agents |
 | **Target User** | AI researchers | Engineering teams & product managers |

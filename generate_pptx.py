@@ -140,7 +140,7 @@ def add_card_with_content(slide, left, top, width, height, title, body_lines,
 
 
 # ═══════════════════════════════════════════
-# SLIDE 1: 一句话 —— AgentBench 是什么
+# SLIDE 1: 一句话 —— AgentEvalOps 是什么
 # ═══════════════════════════════════════════
 slide = prs.slides.add_slide(blank)
 add_bg(slide)
@@ -149,7 +149,7 @@ add_badge(slide, Inches(1), Inches(1.2), "v0.5.0 · MIT 开源",
           bg_color=ACCENT_BG, text_color=ACCENT_LIGHT)
 
 add_text(slide, Inches(1), Inches(1.9), Inches(11), Inches(1.2),
-         "AgentBench", Pt(72), ACCENT_LIGHT, bold=True)
+         "AgentEvalOps", Pt(72), ACCENT_LIGHT, bold=True)
 
 add_text(slide, Inches(1), Inches(3.1), Inches(8), Inches(0.6),
          "AI Agent 评测运维平台", Pt(26), TEXT, bold=True)
@@ -225,13 +225,13 @@ add_card_with_content(slide, start_x + (card_w + gap) * 2, Inches(1.6), card_w, 
 
 
 # ═══════════════════════════════════════════
-# SLIDE 3: 为什么需要 AgentBench（市场痛点）
+# SLIDE 3: 为什么需要 AgentEvalOps（市场痛点）
 # ═══════════════════════════════════════════
 slide = prs.slides.add_slide(blank)
 add_bg(slide)
 
 add_text(slide, Inches(1), Inches(0.5), Inches(10), Inches(0.6),
-         "为什么需要 AgentBench", Pt(36), TEXT, bold=True)
+         "为什么需要 AgentEvalOps", Pt(36), TEXT, bold=True)
 add_text(slide, Inches(1), Inches(1.1), Inches(10), Inches(0.5),
          "\"市场分析\"本是最容易被跳过的环节。但如果你在做 AI Agent，以下三个事实你绕不开。",
          Pt(13), TEXT_MUTED)
@@ -417,7 +417,7 @@ add_text(slide, Inches(1), Inches(1.1), Inches(10), Inches(0.5),
 
 # Build comparison table
 table_data = [
-    ["维度", "AgentBench", "传统 QA 工具", "手工评测"],
+    ["维度", "AgentEvalOps", "传统 QA 工具", "手工评测"],
     ["AI Agent 评测", "✓ 专为此设计", "✗ 不适用", "◑ 低效、不可扩展"],
     ["语义理解", "✓ LLM 评判 + 6 种评测器", "✗ 仅支持精确断言", "◑ 依赖个人判断"],
     ["回归测试", "✓ 自动化版本对比", "✗ 不支持 AI 输出对比", "✗ 完全手动"],
@@ -478,7 +478,7 @@ for i in range(1, rows):
             p.font.color.rgb = TEXT2
 
 add_text(slide, Inches(1), Inches(5.8), Inches(11), Inches(0.6),
-         "一句话分析：AgentBench 是唯一专为 AI Agent 设计的评测运维平台。"
+         "一句话分析：AgentEvalOps 是唯一专为 AI Agent 设计的评测运维平台。"
          "传统 QA 工具的断言模型无法处理 AI 输出的模糊性和多样性，手工评测则不可持续。",
          Pt(11), TEXT_MUTED)
 
@@ -637,7 +637,7 @@ add_text(slide, Inches(1), Inches(1.1), Inches(10), Inches(0.5),
 
 team_cards = [
     ("🧠", "100% AI 构建", ACCENT_BG, ACCENT_LIGHT,
-     "整个 AgentBench 平台完全由 Claude Code 编写。从第一行代码到中文翻译到测试——每一行都是 AI 生成。",
+     "整个 AgentEvalOps 平台完全由 Claude Code 编写。从第一行代码到中文翻译到测试——每一行都是 AI 生成。",
      [("3", "轮迭代"), ("20+", "Bug 修复"), ("18+", "文件本地化")],
      ACCENT_LIGHT),
     ("🔗", "CC Switch 联动", GREEN_BG, GREEN,
@@ -692,7 +692,7 @@ add_badge(slide, Inches(5.6), Inches(1.2), "✓  可演示 · MIT 开源",
           bg_color=GREEN_BG, text_color=GREEN)
 
 add_text(slide, Inches(1), Inches(1.9), Inches(11.3), Inches(1.2),
-         "AgentBench", Pt(68), ACCENT_LIGHT, bold=True, alignment=PP_ALIGN.CENTER)
+         "AgentEvalOps", Pt(68), ACCENT_LIGHT, bold=True, alignment=PP_ALIGN.CENTER)
 
 add_text(slide, Inches(1), Inches(3.2), Inches(11.3), Inches(0.6),
          "AI Agent 评测运维平台 — 用 AI 测试 AI",
@@ -720,7 +720,7 @@ for i, (val, label, clr) in enumerate(cta_stats):
 
 meta_items_cta = [
     "MIT 许可证",
-    "github.com/LinguistWantsTech/agentbench",
+    "github.com/CacinieP/AgentEvalOps",
     "由 Claude Code 构建",
 ]
 for i, item in enumerate(meta_items_cta):
@@ -728,7 +728,7 @@ for i, item in enumerate(meta_items_cta):
              "●  " + item, Pt(11), TEXT_MUTED, alignment=PP_ALIGN.CENTER)
 
 # ── Save ──
-output_path = os.path.join(os.path.dirname(__file__), "AgentBench-路演PPT.pptx")
+output_path = os.path.join(os.path.dirname(__file__), "AgentEvalOps-路演PPT.pptx")
 prs.save(output_path)
 print(f"Saved to {output_path}")
 print(f"Slides: {len(prs.slides)}")

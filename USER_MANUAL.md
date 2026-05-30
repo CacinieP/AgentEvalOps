@@ -1,4 +1,4 @@
-# AgentBench 用户手册
+# AgentEvalOps 用户手册
 
 > 面向 AI Agent 的回归测试、漂移检测与质量保障平台
 
@@ -25,7 +25,7 @@
 
 ## 项目简介
 
-AgentBench 是一个 Web 端工具，帮助你：
+AgentEvalOps 是一个 Web 端工具，帮助你：
 
 1. **定义测试套件** — 编写 AI Agent 的输入和期望输出
 2. **执行真实测试** — 调用你的 Agent endpoint，获取真实响应
@@ -51,7 +51,7 @@ AgentBench 是一个 Web 端工具，帮助你：
 
 ```bash
 # 进入项目目录
-cd agentbench
+cd AgentEvalOps
 
 # 安装依赖
 npm install
@@ -473,7 +473,7 @@ Custom 模式的快速预设：
 
 ## Agent Adapter 适配器
 
-AgentBench 通过 HTTP POST 调用你的 AI Agent。支持三种协议：
+AgentEvalOps 通过 HTTP POST 调用你的 AI Agent。支持三种协议：
 
 ### OpenAI Chat
 
@@ -604,10 +604,10 @@ Authorization: Bearer {api-key} (如有)
 
 | Key | 内容 |
 |-----|------|
-| `agentbench-suites` | 所有测试套件（JSON 数组） |
-| `agentbench-runs` | 所有运行记录（JSON 数组） |
-| `agentbench-initialized` | 是否已加载示例数据（标记值 `"1"`） |
-| `agentbench-settings` | 所有设置项（AI Provider、Agent Endpoint、评估器配置） |
+| `agent-eval-ops-suites` | 所有测试套件（JSON 数组） |
+| `agent-eval-ops-runs` | 所有运行记录（JSON 数组） |
+| `agent-eval-ops-initialized` | 是否已加载示例数据（标记值 `"1"`） |
+| `agent-eval-ops-settings` | 所有设置项（AI Provider、Agent Endpoint、评估器配置） |
 
 ### 数据特点
 
@@ -654,7 +654,7 @@ A: 目前不支持。Settings 中只有一个 Agent Endpoint 配置。如需测�
 
 A: 数据保存在 localStorage 中，通过 `useSyncExternalStore` 响应式读取。在数百条运行记录以内不会有性能问题。如数据量过大，可通过 "Clear All Data" 清理。
 
-### Q: 可以把 AgentBench 部署到服务器吗？
+### Q: 可以把 AgentEvalOps 部署到服务器吗？
 
 A: 可以用 `npm run build && npm run start` 部署为生产服务。但请注意：
 - 数据仍保存在每个用户的浏览器 localStorage 中，不同用户不共享

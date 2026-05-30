@@ -51,7 +51,7 @@ export default function Sidebar() {
         </div>
         <div>
           <h1 className="text-sm font-bold text-[var(--text-primary)] tracking-tight">
-            AgentBench
+            AgentEvalOps
           </h1>
           <p className="text-[10px] text-[var(--text-muted)] uppercase tracking-widest">
             评测运维

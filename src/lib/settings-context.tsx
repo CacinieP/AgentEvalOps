@@ -31,7 +31,7 @@ const DEFAULT_SETTINGS: Settings = {
   runTimeoutMs: 30000,
 };
 
-const STORAGE_KEY = "agentbench-settings";
+const STORAGE_KEY = "agent-eval-ops-settings";
 
 function parseRaw(raw: string): Settings {
   if (!raw) return DEFAULT_SETTINGS;

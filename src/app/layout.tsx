@@ -5,7 +5,7 @@ import { SettingsProvider } from "@/lib/settings-context";
 import { DataProvider } from "@/lib/data-context";
 
 export const metadata: Metadata = {
-  title: "AgentBench — AI Agent 评测运维平台",
+  title: "AgentEvalOps — AI Agent 评测运维平台",
   description:
     "AI Agent 回归测试、漂移检测与质量保障。以 AI 编码为工具，为 AI 编码而构建。",
 };

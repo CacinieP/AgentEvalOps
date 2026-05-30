@@ -17,9 +17,9 @@ import {
   writeToStorage,
 } from "./use-local-storage";
 
-const SUITES_KEY = "agentbench-suites";
-const RUNS_KEY = "agentbench-runs";
-const INIT_KEY = "agentbench-initialized";
+const SUITES_KEY = "agent-eval-ops-suites";
+const RUNS_KEY = "agent-eval-ops-runs";
+const INIT_KEY = "agent-eval-ops-initialized";
 
 interface DataContextType {
   suites: TestSuite[];

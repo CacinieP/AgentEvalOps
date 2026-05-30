@@ -1,5 +1,5 @@
 {
-  "name": "agentbench",
+  "name": "agent-eval-ops",
   "version": "0.1.0",
   "private": true,
   "scripts": {

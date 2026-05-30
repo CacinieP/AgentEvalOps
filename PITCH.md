@@ -1,10 +1,10 @@
-# AgentBench 路演 PPT 大纲
+# AgentEvalOps 路演 PPT 大纲
 
 ---
 
 ## 第 1 页 — 封面
 
-**AgentBench — AI Agent EvalOps Platform**
+**AgentEvalOps — AI Agent EvalOps Platform**
 
 副标题：AI Agent 回归测试 & 质量监控平台
 
@@ -32,7 +32,7 @@
 
 ## 第 3 页 — 解决方案
 
-### AgentBench：AI Agent 的 CI/CD 质量关卡
+### AgentEvalOps：AI Agent 的 CI/CD 质量关卡
 
 一张架构图：
 
@@ -179,7 +179,7 @@ useEffect(() => {
 }, []);
 ```
 
-AgentBench 的方案：
+AgentEvalOps 的方案：
 ```typescript
 // ✅ useSyncExternalStore — React 官方推荐的外部存储同步方式
 const listeners = new Set<() => void>();

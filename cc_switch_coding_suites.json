@@ -193,9 +193,9 @@
         },
         {
           "id": "cc-c524aafa",
-          "name": "Explore the AgentBench project at...",
-          "input": "Explore the AgentBench project at C:\\Users\\admin.DESKTOP-R20EBH6\\Desktop\\program\\1\\agentbench to understand:\n\n1. How the AI API is currently used - read src/app/api/analyze/route.ts fully\n2. What environment variables are referenced (search for process.env across all files)\n3. What components exist in src/components/ (list all files)\n4. What the sidebar looks like and how navigation works (src/components/Sidebar.tsx)\n5. What the current layout structure is (src/app/layout.tsx)\n6. Check if there's any existing settings or config infrastructure\n\nBe thorough - read each file completely.",
-          "expectedOutput": "I'll systematically explore the AgentBench project to understand its structure and usage patterns. Let me start with multiple parallel searches.",
+          "name": "Explore the AgentEvalOps project at...",
+          "input": "Explore the AgentEvalOps project at C:\\Users\\admin.DESKTOP-R20EBH6\\Desktop\\program\\1\\AgentEvalOps to understand:\n\n1. How the AI API is currently used - read src/app/api/analyze/route.ts fully\n2. What environment variables are referenced (search for process.env across all files)\n3. What components exist in src/components/ (list all files)\n4. What the sidebar looks like and how navigation works (src/components/Sidebar.tsx)\n5. What the current layout structure is (src/app/layout.tsx)\n6. Check if there's any existing settings or config infrastructure\n\nBe thorough - read each file completely.",
+          "expectedOutput": "I'll systematically explore the AgentEvalOps project to understand its structure and usage patterns. Let me start with multiple parallel searches.",
           "category": "coding",
           "evaluator": {
             "type": "contains",
@@ -481,9 +481,9 @@
         },
         {
           "id": "cc-c524aafa",
-          "name": "Explore the AgentBench project at...",
-          "input": "Explore the AgentBench project at C:\\Users\\admin.DESKTOP-R20EBH6\\Desktop\\program\\1\\agentbench to understand:\n\n1. How the AI API is currently used - read src/app/api/analyze/route.ts fully\n2. What environment variables are referenced (search for process.env across all files)\n3. What components exist in src/components/ (list all files)\n4. What the sidebar looks like and how navigation works (src/components/Sidebar.tsx)\n5. What the current layout structure is (src/app/layout.tsx)\n6. Check if there's any existing settings or config infrastructure\n\nBe thorough - read each file completely.",
-          "expectedOutput": "I'll systematically explore the AgentBench project to understand its structure and usage patterns. Let me start with multiple parallel searches.",
+          "name": "Explore the AgentEvalOps project at...",
+          "input": "Explore the AgentEvalOps project at C:\\Users\\admin.DESKTOP-R20EBH6\\Desktop\\program\\1\\AgentEvalOps to understand:\n\n1. How the AI API is currently used - read src/app/api/analyze/route.ts fully\n2. What environment variables are referenced (search for process.env across all files)\n3. What components exist in src/components/ (list all files)\n4. What the sidebar looks like and how navigation works (src/components/Sidebar.tsx)\n5. What the current layout structure is (src/app/layout.tsx)\n6. Check if there's any existing settings or config infrastructure\n\nBe thorough - read each file completely.",
+          "expectedOutput": "I'll systematically explore the AgentEvalOps project to understand its structure and usage patterns. Let me start with multiple parallel searches.",
           "category": "coding",
           "evaluator": {
             "type": "contains",
