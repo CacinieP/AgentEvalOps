@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
   - name: 使用疑问
-    url: https://github.com/CacinieP/AgentEvalOps/blob/main/USER_MANUAL.md
+    url: https://github.com/CacinieP/AgentEvalOps/blob/main/docs/USER_MANUAL.md
     about: 使用方法请先查阅用户手册，仍有疑问再开 issue（选择「其他」类别）
