@@ -1,0 +1,53 @@
+name: 🐛 缺陷报告
+description: 报告 AgentEvalOps 的功能异常
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: 感谢报告缺陷！请尽量填写完整，便于复现与定位。
+  - type: textarea
+    id: repro
+    attributes:
+      label: 复现步骤
+      description: 从什么操作开始，先后做了什么
+      placeholder: |
+        1. 打开 /compare 页面
+        2. 选择基线版本 …
+        3. 出现 …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为
+      description: 如有控制台报错或截图，请一并附上
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 影响范围
+      options:
+        - 仪表盘 /
+        - 测试套件 /suites
+        - 版本对比 /compare
+        - 运行详情 /run/[id]
+        - 设置 /settings
+        - API 路由（execute / analyze）
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: 环境
+      description: 浏览器及版本、操作系统、Node 版本
+      placeholder: Chrome 140 / macOS 26 / Node 22
+    validations:
+      required: true
