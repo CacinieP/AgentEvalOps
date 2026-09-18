@@ -133,6 +133,14 @@ This project was selected from 45+ daily opportunity reports as the most validat
 - **Mid-term** — Optional backend storage beyond localStorage; CLI / CI integration to run evals in pipelines
 - **Long-term** — Team collaboration with roles; cross-version quality trend reports
 
+## Project Docs
+
+| Document | Description |
+|---|---|
+| [User Manual](./docs/USER_MANUAL.md) | Full walkthrough of every page and workflow |
+| [Pitch materials](./docs/pitch/) | Hackathon pitch deck (PPTX), landing page, and the script that generates them |
+| [CC Switch tooling](./scripts/) | Extract coding tasks from CC Switch session logs into importable test suites |
+
 ## Contributing
 
 Issues and pull requests are welcome! Please read [CONTRIBUTING.md](./CONTRIBUTING.md) first — it covers the local setup, branch naming, and the issue → PR workflow.
