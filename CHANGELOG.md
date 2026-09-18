@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.6.0] — 2026-09-18 · 仓库治理与文档升华
+
+### 治理
+- **CONTRIBUTING.md**：本地开发命令、分支命名规范（`feat/fix/chore/docs` + 功能短词）、issue → 分支 → PR → CI 合并的完整流程、代码风格约定
+- **issue 模板**（YAML 表单式）：缺陷报告（复现步骤 / 期望 / 实际 / 影响范围 / 环境）、功能提案（场景 / 方案 / 备选 + 查重确认），禁用空白 issue
+- **PR 模板**：变更说明、`Fixes #N` 关联、lint / test / build 自检清单、验证方式
+
+### 文档
+- **中英 README 结构修复**：功能列表移回 Features 节（原为空标题、内容错挂 Screenshots 节下）
+- 新增 **CI / MIT License 徽章**、**Roadmap**（近期 / 中期 / 远期）、**Contributing** 与**项目文档索引**小节
+- 中文版补齐滞后内容：`/settings` 页面、`api/execute` 端点、`agent-adapter.ts`；AI 配置说明从「环境变量 + 仅 Claude」更新为「Settings 页多 Provider」；节序与英文版逐节对齐
+
+### 清理
+- 根目录 8 个非运行时文件归位（`git mv`，历史保留）：路演材料 → `docs/pitch/`，用户手册 → `docs/`，CC Switch 转换工具 → `scripts/`
+- issue 引导链接同步指向 `docs/USER_MANUAL.md`
+
+### 其他
+- `package.json` 版本号 0.1.0 → 0.6.0，对齐 CHANGELOG（0.2.0–0.5.0 已有记录但版本号未跟进）
+
+### 验证
+- 72 个单元测试全部通过；ESLint 零告警；生产构建成功
+
+---
+
 ## [0.5.0] — 2026-05-16 · 全面中文本地化
 
 ### 本地化
