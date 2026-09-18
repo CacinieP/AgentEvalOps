@@ -2,18 +2,15 @@
 
 [English](README.md) | [中文](README.zh.md)
 
+[![CI](https://github.com/CacinieP/AgentEvalOps/actions/workflows/ci.yml/badge.svg)](https://github.com/CacinieP/AgentEvalOps/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+
 > Regression testing, drift detection, and quality assurance for AI agents.
 > **Built entirely with Claude Code** — AI coding as both the means and the product.
 
 > ⚠️ **Naming Notice**: This project was formerly named AgentBench and was renamed to **AgentEvalOps** to avoid confusion with [THUDM/AgentBench](https://github.com/THUDM/AgentBench), the academic benchmark for evaluating LLM-as-Agent capabilities from Tsinghua University.
 
 ## Features
-
-## Screenshots
-
-| Dashboard | Test Suites | Compare Runs |
-|---|---|---|
-| ![Dashboard](screenshots/dashboard.png) | ![Suites](screenshots/suites.png) | ![Compare](screenshots/compare.png) |
 
 - **Test Suite Management** — Create custom test suites with inputs and expected outputs for your AI agents
 - **Regression Testing** — Run evaluations and track quality across agent versions
@@ -22,6 +19,12 @@
 - **Multi-Provider Support** — Works with Anthropic, OpenAI, and any OpenAI-compatible API (DeepSeek, Mistral, Groq, Together, OpenRouter, SiliconFlow, etc.)
 - **Local-First** — All data stored in browser localStorage, no backend database required
 - **API Key Transparency** — Keys are stored in localStorage and sent to this app's server routes only when you trigger tests or analysis; the server forwards them to the configured provider. For full local control, self-host the app.
+
+## Screenshots
+
+| Dashboard | Test Suites | Compare Runs |
+|---|---|---|
+| ![Dashboard](screenshots/dashboard.png) | ![Suites](screenshots/suites.png) | ![Compare](screenshots/compare.png) |
 
 ## Tech Stack
 
@@ -75,6 +78,7 @@ src/
 │   ├── suites/page.tsx       # Test suite CRUD + run simulation
 │   ├── compare/page.tsx      # Version comparison with AI analysis
 │   ├── run/[id]/page.tsx     # Run detail with expandable results
+│   ├── api/execute/route.ts  # Agent endpoint execution
 │   └── api/analyze/route.ts  # Multi-provider AI analysis endpoint
 ├── components/
 │   ├── CreateSuiteModal.tsx  # New suite creation form
@@ -84,6 +88,7 @@ src/
 │   ├── Sidebar.tsx           # Navigation + recent runs
 │   └── StatusBadge.tsx       # Pass/fail/warning badges
 └── lib/
+    ├── agent-adapter.ts      # Agent endpoint adapter (OpenAI/Anthropic/custom HTTP)
     ├── ai-provider.ts        # Multi-provider AI abstraction (fetch)
     ├── data-context.tsx       # localStorage data store (suites + runs)
     ├── demo-data.ts           # AI analysis fallback data
@@ -121,6 +126,16 @@ This project was selected from 45+ daily opportunity reports as the most validat
 | **What it tests** | 8 generic environments | Your own agent's test suites |
 | **Output** | Leaderboard & research data | Regression reports & quality trends |
 | **Stack** | Python + Docker | Next.js + React + TypeScript |
+
+## Roadmap
+
+- **Near-term** — Import/export of suites and run results (JSON); more built-in evaluators
+- **Mid-term** — Optional backend storage beyond localStorage; CLI / CI integration to run evals in pipelines
+- **Long-term** — Team collaboration with roles; cross-version quality trend reports
+
+## Contributing
+
+Issues and pull requests are welcome! Please read [CONTRIBUTING.md](./CONTRIBUTING.md) first — it covers the local setup, branch naming, and the issue → PR workflow.
 
 ## License
 
